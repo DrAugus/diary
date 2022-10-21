@@ -1,1 +1,4 @@
-theme: jekyll-theme-cayman
+theme: jekyll-theme-architect
+github:
+  home: https://draugus.github.io/diary/
+  blog: https://draugus.github.io/
