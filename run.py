@@ -1,9 +1,12 @@
 import math
-
+from datetime import date
 
 big_month = [1, 3, 5, 7, 8, 10, 12]
 
 url_prefix = "https://draugus.github.io/diary/"
+
+# 2022-11 begin index 2
+begin_index = 2
 
 
 def display_form(days, start, y, m):
@@ -49,7 +52,8 @@ def everyday(y, m):
             else:
                 range_day = 28
         mm = add_prefix(mm)
-        display_form(range_day, 2, y, m)
+        adjust_begin_index(y, m)
+        display_form(range_day, begin_index, y, m)
         for dd in range(1, range_day+1):
             dd = add_prefix(dd)
             y = str(y)
@@ -66,5 +70,17 @@ def add_prefix(a):
     return prefix
 
 
+def adjust_begin_index(y, m):
+    global begin_index
+    d0 = date(2022, 11, 1)
+    d1 = date(y, m, 1)
+    dur = d1 - d0
+    dur_day = dur.days
+    print(dur_day)
+    dur_day += begin_index
+    begin_index = dur_day % 7
+    print("new begin: ", begin_index)
+
+
 if __name__ == '__main__':
-    everyday(2022, 11)
+    everyday(2022, 12)
