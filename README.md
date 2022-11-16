@@ -2,7 +2,7 @@
 
 to keep a diary, to make life fun
 
-- [2022] [online][2022-onlie]
+- [2022] [online][2022-online]
 
 
 [2022]: ./2022/
