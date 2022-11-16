@@ -9,6 +9,8 @@ url_prefix = "https://draugus.github.io/diary/"
 def display_form(days, start, y, m):
     # start 0 - 6
     # Sun Mon Tue Wed Thu Fri Sat
+    print("|Sun|Mon|Tue|Wed|Thu|Fri|Sat|")
+    print("|:---:|:---:|:---:|:---:|:---:|:---:|:---:|")
     row = math.ceil((days+start) / 7)
     val = 0
     for i in range(0, row):
@@ -51,8 +53,8 @@ def everyday(y, m):
         for dd in range(1, range_day+1):
             dd = add_prefix(dd)
             y = str(y)
-            print("[" + y + "/" + mm + "/" + dd + "]: " + 
-                url_prefix + y + "/" + mm + "/" + dd)
+            print("[" + y + "/" + mm + "/" + dd + "]: " +
+                  url_prefix + y + "/" + mm + "/" + dd)
         if m:
             break
 
