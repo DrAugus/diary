@@ -1,5 +1,6 @@
 import math
 from datetime import date
+import os
 
 big_month = [1, 3, 5, 7, 8, 10, 12]
 
@@ -82,5 +83,36 @@ def adjust_begin_index(y, m):
     print("new begin: ", begin_index)
 
 
+list_file_depth = 2
+current_depth = 0
+all_file_name =[]
+
+def list_all_files(root_dir):
+    _files = []
+    exclude_path = ['.github','.vscode','.gitignore','LICENSE','.git']
+    l1 = os.listdir(root_dir)# 列出文件夹下的所有目录和文件
+    l1 = list(filter(lambda e: e not in exclude_path,l1 ))
+    global current_depth
+    current_depth += 1
+    # print(l1)
+    all_file_name.append(l1)
+
+    if current_depth >= list_file_depth:
+        return _files
+
+    for i in range(0,len(l1)):
+        path = os.path.join(root_dir, l1[i])
+        if os.path.isdir(path):
+            _files.extend(list_all_files(path))
+        if os.path.isfile(path):
+            _files.append(path)
+
+    return _files
+
 if __name__ == '__main__':
-    everyday(2022, 12)
+    alll = list_all_files('/Users/apple/Documents/GitHub/diary')
+    # print(alll)
+    # everyday(2022, 12)
+    all_file_name = sum(all_file_name,[])
+    # all_file_name = list(map(lambda e: int(e),all_file_name))
+    print(all_file_name)
