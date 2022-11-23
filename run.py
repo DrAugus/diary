@@ -135,10 +135,6 @@ def list_all_files(root_dir):
     return _files
 
 
-def mkdir(path):
-    folder = os.path.exists(path)
-
-
 def create_today_file():
     today = date.today()
     today = str(today).split('-')
@@ -169,7 +165,7 @@ def create_today_file():
         judge = input()
         judge_arr = [['N', 'n'], ['Y', 'y']]
         if judge in judge_arr[0]:
-            print("ok, done")
+            print("ok, do nothing")
             return
 
     # no current day file
@@ -192,23 +188,28 @@ def create_today_file():
     fo.close()
 
 
-all_feature = '-><-------------><-\n' \
-    '你想做什么？\n' \
-    '1: create today file or add something in today file\n' \
-    '2: list all files but only depth 2\n' \
-    '-><-------------><-'
+all_feature = '\n=========*****=========\n' \
+    'What do you want to do? \n' \
+    '   1: create today file or add something in today file\n' \
+    '   2: list all files but only depth 2\n' \
+    '   3: nothing\n' \
+    '=========*****=========\n'
 
 if __name__ == '__main__':
-
     print(all_feature)
-
-    create_today_file()
-
-    # everyday(2022, 12)
-
-    #
-    list_all_files(project_path)
-    # merge
-    all_file_name = sum(all_file_name, [])
-    all_file_name = list(filter(lambda e: e.isdigit(), all_file_name))
-    print(all_file_name)
+    while 1:
+        judge = input()
+        if judge == '1':
+            create_today_file()
+            break
+        elif judge == '2':
+            list_all_files(project_path)
+            # merge
+            all_file_name = sum(all_file_name, [])
+            all_file_name = list(filter(lambda e: e.isdigit(), all_file_name))
+            print(all_file_name)
+            break
+        elif judge == '3':
+            break
+        else:
+            print('error input, check again')
