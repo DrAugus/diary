@@ -233,6 +233,8 @@ all_feature = '\n=========*****=========\n' \
     '   1: create today file or add something in today file\n' \
     '   2: list all files but only depth 2\n' \
     '   3: copy file to today file \n' \
+    '   4: copy file to appoint file \n' \
+    '   5: quit and create a file named temp to write \n' \
     '   0: nothing\n' \
     '=========*****=========\n'
 
@@ -249,6 +251,46 @@ if __name__ == '__main__':
             all_file_name = sum(all_file_name, [])
             all_file_name = list(filter(lambda e: e.isdigit(), all_file_name))
             print(all_file_name)
+            break
+        elif judge == '3':
+            create_today_file(True)
+            break
+        elif judge == '4':
+            print("please input year month day, as like '2022 01 01' ")
+            new_in = input()
+            new_in = new_in.split(' ')
+
+            source = project_path + '/temp'
+            fo = open(source, "ab+")
+            fo.close()
+            list_all_files(project_path)
+            print("all_file_name", all_file_name)
+            # [['2022', '2031'], ['11', '10'], ['12']]
+            p1 = all_file_name[0]
+            p1 = list(filter(lambda e: e.isdigit(), p1))
+            print("path depth1, year:", p1)
+            if new_in[0] not in p1:
+                os.mkdir(project_path + '/' + new_in[0])
+                os.mkdir(project_path + '/' + new_in[0] + '/' + new_in[1])
+                print("mkdir year and month")
+            else:
+                year_index = p1.index(new_in[0])
+                print("year index", year_index)
+                p2 = all_file_name[year_index + 1]
+                print("path depth2, month:", p2)
+                if new_in[1] not in p2:
+                    os.mkdir(project_path + '/' + new_in[0] + '/' + new_in[1])
+                    print("mkdir month")
+
+            des = project_path+"/"+new_in[0] + \
+                "/"+new_in[1] + "/"+new_in[2] + ".md"
+            print("source: ", source, "\ndes: ", des)
+            cp_file(source, des)
+            break
+        elif judge == '5':
+            source = project_path + '/temp'
+            fo = open(source, "ab+")
+            fo.close()
             break
         elif judge == '0':
             break
