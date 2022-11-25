@@ -11,6 +11,12 @@ month_char = [
 
 url_prefix = "https://draugus.github.io/diary/"
 
+is_windows = os.name == 'nt'
+if is_windows:
+    print("now is windows")
+else:
+    print("now not is windows")
+
 # 2022-11 begin index 2
 begin_index = 2
 
@@ -135,7 +141,7 @@ def list_all_files(root_dir):
     return _files
 
 
-def create_today_file():
+def create_today_file(cp=False):
     today = date.today()
     today = str(today).split('-')
     # today = ['2058', '07', '21']
@@ -168,16 +174,50 @@ def create_today_file():
             print("ok, do nothing")
             return
 
-    # no current day file
-    # or add something
+    if cp:
+        source = project_path + '/temp'
+        des = path+"/"+day_file
+        cp_file(source, des)
+        return
 
+    option_write_file = "\n" \
+        "select one way to write file\n"\
+        "   1. use command line to write"\
+        "   2. copy a file to current day"
+    print(option_write_file)
+    while 1:
+        judge = input()
+        if judge == '1':
+            # no current day file
+            # or add something
+            write_file(path+"/"+day_file, exist_file)
+            break
+        elif judge == '2':
+            source = project_path + '/temp'
+            des = path+"/"+day_file
+            cp_file(source, des)
+            break
+        else:
+            print('error input, check again')
+
+
+def cp_file(source, des):
+    if is_windows:
+        os.system('copy ' + source + ' ' + des)
+    else:
+        os.system('cp ' + source + ' ' + des)
+
+
+def write_file(file, is_exist):
     # ab+
     # 以二进制格式打开一个文件用于追加。
     # 如果该文件已存在，文件指针将会放在文件的结尾。
     # 如果该文件不存在，创建新文件用于读写。
-    fo = open(path+"/"+day_file, "ab+")
-    if not exist_file:
-        print("new file", day_file)
+    fo = open(file, "ab+")
+    if not is_exist:
+        print("new file", file)
+    else:
+        print("open file", file)
     print('please input content, \':q\' to exit')
     while 1:
         file_content = input()
@@ -192,7 +232,8 @@ all_feature = '\n=========*****=========\n' \
     'What do you want to do? \n' \
     '   1: create today file or add something in today file\n' \
     '   2: list all files but only depth 2\n' \
-    '   3: nothing\n' \
+    '   3: copy file to today file \n' \
+    '   0: nothing\n' \
     '=========*****=========\n'
 
 if __name__ == '__main__':
@@ -209,7 +250,7 @@ if __name__ == '__main__':
             all_file_name = list(filter(lambda e: e.isdigit(), all_file_name))
             print(all_file_name)
             break
-        elif judge == '3':
+        elif judge == '0':
             break
         else:
             print('error input, check again')
