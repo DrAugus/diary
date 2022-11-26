@@ -177,7 +177,7 @@ def create_today_file(cp=False):
     if cp:
         source = project_path + '/temp'
         des = path+"/"+day_file
-        cp_file(source, des)
+        cp_file_cmd(source, des)
         return
 
     option_write_file = "\n" \
@@ -195,15 +195,49 @@ def create_today_file(cp=False):
         elif judge == '2':
             source = project_path + '/temp'
             des = path+"/"+day_file
-            cp_file(source, des)
+            cp_file_cmd(source, des)
             break
         else:
             print('error input, check again')
 
 
-def cp_file(source, des):
+def cp_file():
+    print("please input year month day, as like '2022 01 01' ")
+    new_in = input()
+    new_in = new_in.split(' ')
+
+    source = project_path + '/temp'
+    fo = open(source, "ab+")
+    fo.close()
+    list_all_files(project_path)
+    print("all_file_name", all_file_name)
+    # [['2022', '2031'], ['11', '10'], ['12']]
+    p1 = all_file_name[0]
+    p1 = list(filter(lambda e: e.isdigit(), p1))
+    print("path depth1, year:", p1)
+    if new_in[0] not in p1:
+        os.mkdir(project_path + '/' + new_in[0])
+        os.mkdir(project_path + '/' + new_in[0] + '/' + new_in[1])
+        print("mkdir year and month")
+    else:
+        year_index = p1.index(new_in[0])
+        print("year index", year_index)
+        p2 = all_file_name[year_index + 1]
+        print("path depth2, month:", p2)
+        if new_in[1] not in p2:
+            os.mkdir(project_path + '/' + new_in[0] + '/' + new_in[1])
+            print("mkdir month")
+
+    des = project_path+"/"+new_in[0] + \
+        "/"+new_in[1] + "/"+new_in[2] + ".md"
+    print("source: ", source, "\ndes: ", des)
+    cp_file_cmd(source, des)
+
+
+def cp_file_cmd(source, des):
     if is_windows:
-        os.system('copy ' + source + ' ' + des)
+        print("now windows, but using cp command")
+        os.system('cp ' + source + ' ' + des)
     else:
         os.system('cp ' + source + ' ' + des)
 
@@ -230,10 +264,11 @@ def write_file(file, is_exist):
 
 all_feature = '\n=========*****=========\n' \
     'What do you want to do? \n' \
-    '   1: create today file or add something in today file\n' \
+    '   1: create today file or add something in today file.\n' \
+    '       use command, not commended\n' \
     '   2: list all files but only depth 2\n' \
     '   3: copy file to today file \n' \
-    '   4: copy file to appoint file \n' \
+    '   4: **commend -> copy file to appoint file \n' \
     '   5: quit and create a file named temp to write \n' \
     '   0: nothing\n' \
     '=========*****=========\n'
@@ -256,36 +291,7 @@ if __name__ == '__main__':
             create_today_file(True)
             break
         elif judge == '4':
-            print("please input year month day, as like '2022 01 01' ")
-            new_in = input()
-            new_in = new_in.split(' ')
-
-            source = project_path + '/temp'
-            fo = open(source, "ab+")
-            fo.close()
-            list_all_files(project_path)
-            print("all_file_name", all_file_name)
-            # [['2022', '2031'], ['11', '10'], ['12']]
-            p1 = all_file_name[0]
-            p1 = list(filter(lambda e: e.isdigit(), p1))
-            print("path depth1, year:", p1)
-            if new_in[0] not in p1:
-                os.mkdir(project_path + '/' + new_in[0])
-                os.mkdir(project_path + '/' + new_in[0] + '/' + new_in[1])
-                print("mkdir year and month")
-            else:
-                year_index = p1.index(new_in[0])
-                print("year index", year_index)
-                p2 = all_file_name[year_index + 1]
-                print("path depth2, month:", p2)
-                if new_in[1] not in p2:
-                    os.mkdir(project_path + '/' + new_in[0] + '/' + new_in[1])
-                    print("mkdir month")
-
-            des = project_path+"/"+new_in[0] + \
-                "/"+new_in[1] + "/"+new_in[2] + ".md"
-            print("source: ", source, "\ndes: ", des)
-            cp_file(source, des)
+            cp_file()
             break
         elif judge == '5':
             source = project_path + '/temp'
