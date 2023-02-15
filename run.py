@@ -60,7 +60,7 @@ def display_form(days, start, y, m):
 
 
 def everyday(y, m):
-    print(y, m)
+    print("everyday", y, m)
     res = ""
     run_year = False
     if y % 4:
@@ -159,6 +159,7 @@ def create_today_file(cp=False):
         print("mkdir month", today[1])
         # meanwhile add readme and
         # all links about this month
+        print("create today: meanwhile add readme and all links about this month")
         everyday(int(today[0]), int(today[1]))
 
     path = os.path.join(path, today[1])
@@ -218,7 +219,7 @@ def cp_file():
     if new_in[0] not in p1:
         os.mkdir(project_path + '/' + new_in[0])
         os.mkdir(project_path + '/' + new_in[0] + '/' + new_in[1])
-        print("mkdir year and month")
+        print("mkdir year and month, y m is ", new_in[0], new_in[1])
     else:
         year_index = p1.index(new_in[0])
         print("year index", year_index)
@@ -226,7 +227,9 @@ def cp_file():
         print("path depth2, month:", p2)
         if new_in[1] not in p2:
             os.mkdir(project_path + '/' + new_in[0] + '/' + new_in[1])
-            print("mkdir month")
+            print("mkdir month, m is ", )
+            print("cp file: meanwhile add readme and all links about this month")
+            everyday(int(new_in[0]), int(new_in[1]))
 
     des = project_path+"/"+new_in[0] + \
         "/"+new_in[1] + "/"+new_in[2] + ".md"
