@@ -272,6 +272,7 @@ def write_file(file, is_exist):
 
 
 def modify_line(y, m, d):
+    # print('para', y, m, d)
     if not isinstance(y, str):
         y = str(y)
     filename = project_path+"/" + y + "/README.md"
@@ -281,29 +282,42 @@ def modify_line(y, m, d):
         d = str(d)
         if len(d) != 2:
             d = '0' + d
+    # print('modify', y, m, d)
     all_line = ""
     # for month Dec
     next_month = '######'
+    current_month = month_char[m-1]
     if m < 12:
         # m - 1 is current month
         next_month = month_char[m]
-    find_str = '|' + d+'|'
-    month_line_idx = -1
+    find_str = '|' + d + '|'
+    cur_month_line_idx = -1
+    next_month_line_idx = 999999
     with open(filename, "r+", encoding='utf-8') as file_handle:
         all_line = file_handle.readlines()
         for idx, ll in enumerate(all_line):
-            find_index = ll.find(find_str)
+            if current_month in ll:
+                cur_month_line_idx = idx
+                # print("find current month", idx)
             if next_month in ll:
-                month_line_idx = idx
-                print("find next month", idx)
-            if month_line_idx != -1 and idx > month_line_idx:
-                break
+                next_month_line_idx = idx
+                # print("find next month", idx)
+        
+        for idx, ll in enumerate(all_line):
+            find_index = ll.find(find_str)
+
+            condition = (int(m) == 12 and idx > cur_month_line_idx) or \
+                (int(m) < 12 and
+                    idx > cur_month_line_idx and idx < next_month_line_idx)
+
+            if not condition:
+                continue
             if ll.find(find_str) != -1:
                 this_line = all_line[idx]
                 prefix = this_line[:find_index]
-                # print("prefix", prefix)
+                print("prefix", prefix)
                 suffix = this_line[find_index+len(find_str):]
-                # print("suffix", suffix)
+                print("suffix", suffix)
                 m = str(m)
                 if len(m) != 2:
                     m = '0' + m
@@ -378,7 +392,10 @@ if __name__ == '__main__':
             obj = os.popen(cmd)
             modify_days = obj.read().split('\n')
             print(modify_days)
+            # modify_line('2023', '02','02')
             for dd in modify_days:
+                if not len(dd):
+                    continue
                 modify_line(y, m, dd)
             break
         elif judge == '0':
