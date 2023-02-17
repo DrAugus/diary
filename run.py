@@ -17,8 +17,9 @@ if is_windows:
 else:
     print("now not is windows")
 
-# 2022-11 begin index 2
-begin_index = 2
+# 2022-09 begin index 4
+# index from 0, 0 is Sun.
+begin_index = 4
 
 # 当前文件的上级目录 即本项目目录
 project_path = os.path.realpath(os.path.dirname(__file__))
@@ -51,7 +52,9 @@ def display_form(days, start, y, m):
             else:
                 val = int(val) + 1
                 val = add_prefix(val)
-                complete_val = "["+val+"]"+"["+str(y)+"/"+str(m)+"/"+val+"]"
+                # complete_val = "["+val+"]"+"["+str(y)+"/"+str(m)+"/"+val+"]"
+                # 表格内不再添加链接
+                complete_val = val
                 s += complete_val + "|"
         res += s + '\n'
     res += "\n\n\n"
@@ -77,12 +80,14 @@ def everyday(y, m):
             else:
                 range_day = 28
         mm = add_prefix(mm)
-        print(mm)
+        print("month", mm)
         adjust_begin_index(y, m)
+        # form
         res += display_form(range_day, begin_index, y, mm)
         for dd in range(1, range_day+1):
             dd = add_prefix(dd)
             y = str(y)
+            # link
             res += "[" + y + "/" + mm + "/" + dd + "]: " +\
                 url_prefix + y + "/" + mm + "/" + dd + "\n"
         if m:
@@ -102,7 +107,7 @@ def add_prefix(a):
 
 def adjust_begin_index(y, m):
     global begin_index
-    d0 = date(2022, 11, 1)
+    d0 = date(2022, 9, 1)
     d1 = date(y, m, 1)
     dur = d1 - d0
     dur_day = dur.days
@@ -233,6 +238,7 @@ def cp_file():
 
     des = project_path+"/"+new_in[0] + \
         "/"+new_in[1] + "/"+new_in[2] + ".md"
+    modify_line(new_in[0], new_in[1], new_in[2])
     print("source: ", source, "\ndes: ", des)
     cp_file_cmd(source, des)
 
@@ -265,6 +271,50 @@ def write_file(file, is_exist):
     fo.close()
 
 
+def modify_line(y, m, d):
+    if not isinstance(y, str):
+        y = str(y)
+    filename = project_path+"/" + y + "/README.md"
+    if not isinstance(m, int):
+        m = int(m)
+    if not isinstance(d, str):
+        d = str(d)
+        if len(d) != 2:
+            d = '0' + d
+    all_line = ""
+    # for month Dec
+    next_month = '######'
+    if m < 12:
+        # m - 1 is current month
+        next_month = month_char[m]
+    find_str = '|' + d+'|'
+    month_line_idx = -1
+    with open(filename, "r+", encoding='utf-8') as file_handle:
+        all_line = file_handle.readlines()
+        for idx, ll in enumerate(all_line):
+            find_index = ll.find(find_str)
+            if next_month in ll:
+                month_line_idx = idx
+                print("find next month", idx)
+            if month_line_idx != -1 and idx > month_line_idx:
+                break
+            if ll.find(find_str) != -1:
+                this_line = all_line[idx]
+                prefix = this_line[:find_index]
+                # print("prefix", prefix)
+                suffix = this_line[find_index+len(find_str):]
+                # print("suffix", suffix)
+                m = str(m)
+                if len(m) != 2:
+                    m = '0' + m
+                add_link = f'|[{d}][{y}/{m}/{d}]|'
+                change_line = prefix+add_link+suffix
+                print('this_line', this_line, "change_line", change_line)
+                all_line[idx] = change_line
+    with open(filename, "w+", encoding='utf-8') as file_handle:
+        file_handle.writelines(all_line)
+
+
 all_feature = '\n=========*****=========\n' \
     'What do you want to do? \n' \
     '   1: create today file or add something in today file.\n' \
@@ -273,6 +323,8 @@ all_feature = '\n=========*****=========\n' \
     '   3: copy file to today file \n' \
     '   4: **commend -> copy file to appoint file \n' \
     '   5: quit and create a file named temp to write \n' \
+    '   6: write every day, input y and m \n' \
+    '   7: modify line \n' \
     '   0: nothing\n' \
     '=========*****=========\n'
 
@@ -300,6 +352,34 @@ if __name__ == '__main__':
             source = project_path + '/temp'
             fo = open(source, "ab+")
             fo.close()
+            break
+        elif judge == '6':
+            print("everyday, input y, m")
+            new_in = input()
+            new_in = new_in.split(' ')
+            if len(new_in) != 2:
+                print("error input")
+                break
+            y = new_in[0]
+            m = new_in[1]
+            print("year ", y, "month ", m)
+            everyday(int(y), int(m))
+            break
+        elif judge == '7':
+            print("modify line, input y, m")
+            new_in = input()
+            new_in = new_in.split(' ')
+            if len(new_in) != 2:
+                print("error input")
+                break
+            y, m = new_in[0], new_in[1]
+            print("your input", y, m)
+            cmd = f"cd {project_path}/{y}/{m} && ls | cut -d '.' -f 1"
+            obj = os.popen(cmd)
+            modify_days = obj.read().split('\n')
+            print(modify_days)
+            for dd in modify_days:
+                modify_line(y, m, dd)
             break
         elif judge == '0':
             break
