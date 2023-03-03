@@ -88,3 +88,48 @@
 [2023/02/27]: https://draugus.github.io/diary/2023/02/27
 [2023/02/28]: https://draugus.github.io/diary/2023/02/28
 [2023/02/29]: https://draugus.github.io/diary/2023/02/29
+
+
+## Mar
+
+|Sun|Mon|Tue|Wed|Thu|Fri|Sat|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| | | |01|[02][2023/03/02]|03|04|
+|05|06|07|08|09|10|11|
+|12|13|14|15|16|17|18|
+|19|20|21|22|23|24|25|
+|26|27|28|29|30|31| |
+
+
+
+[2023/03/01]: https://draugus.github.io/diary/2023/03/01
+[2023/03/02]: https://draugus.github.io/diary/2023/03/02
+[2023/03/03]: https://draugus.github.io/diary/2023/03/03
+[2023/03/04]: https://draugus.github.io/diary/2023/03/04
+[2023/03/05]: https://draugus.github.io/diary/2023/03/05
+[2023/03/06]: https://draugus.github.io/diary/2023/03/06
+[2023/03/07]: https://draugus.github.io/diary/2023/03/07
+[2023/03/08]: https://draugus.github.io/diary/2023/03/08
+[2023/03/09]: https://draugus.github.io/diary/2023/03/09
+[2023/03/10]: https://draugus.github.io/diary/2023/03/10
+[2023/03/11]: https://draugus.github.io/diary/2023/03/11
+[2023/03/12]: https://draugus.github.io/diary/2023/03/12
+[2023/03/13]: https://draugus.github.io/diary/2023/03/13
+[2023/03/14]: https://draugus.github.io/diary/2023/03/14
+[2023/03/15]: https://draugus.github.io/diary/2023/03/15
+[2023/03/16]: https://draugus.github.io/diary/2023/03/16
+[2023/03/17]: https://draugus.github.io/diary/2023/03/17
+[2023/03/18]: https://draugus.github.io/diary/2023/03/18
+[2023/03/19]: https://draugus.github.io/diary/2023/03/19
+[2023/03/20]: https://draugus.github.io/diary/2023/03/20
+[2023/03/21]: https://draugus.github.io/diary/2023/03/21
+[2023/03/22]: https://draugus.github.io/diary/2023/03/22
+[2023/03/23]: https://draugus.github.io/diary/2023/03/23
+[2023/03/24]: https://draugus.github.io/diary/2023/03/24
+[2023/03/25]: https://draugus.github.io/diary/2023/03/25
+[2023/03/26]: https://draugus.github.io/diary/2023/03/26
+[2023/03/27]: https://draugus.github.io/diary/2023/03/27
+[2023/03/28]: https://draugus.github.io/diary/2023/03/28
+[2023/03/29]: https://draugus.github.io/diary/2023/03/29
+[2023/03/30]: https://draugus.github.io/diary/2023/03/30
+[2023/03/31]: https://draugus.github.io/diary/2023/03/31
