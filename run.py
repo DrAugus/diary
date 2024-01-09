@@ -93,9 +93,19 @@ def everyday(y, m):
         if m:
             break
     # print(res)
-    fo = open(project_path + "/" + y + "/README.md", "ab+")
+    filename=project_path + "/" + y + "/README.md"
+    fo = open(filename, "ab+")
     fo.write(res.encode())
     fo.close()
+    
+    # 前两行是否有年
+    with open(filename, 'r') as file:
+        lines = file.readlines()
+    if lines and (y not in lines[0] and y not in lines[1]):
+        lines[0] = f"# {y}\n"
+        with open(filename, 'w') as file:
+            file.writelines(lines)
+
 
 
 def add_prefix(a):
@@ -225,6 +235,8 @@ def cp_file():
         os.mkdir(project_path + '/' + new_in[0])
         os.mkdir(project_path + '/' + new_in[0] + '/' + new_in[1])
         print("mkdir year and month, y m is ", new_in[0], new_in[1])
+        print("cp file: meanwhile add readme and all links about this month")
+        everyday(int(new_in[0]), int(new_in[1]))
     else:
         year_index = p1.index(new_in[0])
         print("year index", year_index)
@@ -293,6 +305,19 @@ def modify_line(y, m, d):
     find_str = '|' + d + '|'
     cur_month_line_idx = -1
     next_month_line_idx = 999999
+
+    # 防止没有该文件
+    # 检查文件是否存在
+    if not os.path.isfile(filename):
+        # 文件不存在，创建文件
+        with open(filename, 'w') as file:
+            # 文件已创建，可以在此处写入内容，如果不需要写入可以什么也不做
+            pass
+    else:
+        # 文件存在，不做任何操作
+        print("File already exists.")
+
+
     with open(filename, "r+", encoding='utf-8') as file_handle:
         all_line = file_handle.readlines()
         for idx, ll in enumerate(all_line):

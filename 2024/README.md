@@ -1,0 +1,45 @@
+# 2024
+
+## Jan
+
+|Sun|Mon|Tue|Wed|Thu|Fri|Sat|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| |01|02|03|04|05|06|
+|07|[08][2024/01/08]|[09][2024/01/09]|10|11|12|13|
+|14|15|16|17|18|19|20|
+|21|22|23|24|25|26|27|
+|28|29|30|31| | | |
+
+
+
+[2024/01/01]: https://draugus.github.io/diary/2024/01/01
+[2024/01/02]: https://draugus.github.io/diary/2024/01/02
+[2024/01/03]: https://draugus.github.io/diary/2024/01/03
+[2024/01/04]: https://draugus.github.io/diary/2024/01/04
+[2024/01/05]: https://draugus.github.io/diary/2024/01/05
+[2024/01/06]: https://draugus.github.io/diary/2024/01/06
+[2024/01/07]: https://draugus.github.io/diary/2024/01/07
+[2024/01/08]: https://draugus.github.io/diary/2024/01/08
+[2024/01/09]: https://draugus.github.io/diary/2024/01/09
+[2024/01/10]: https://draugus.github.io/diary/2024/01/10
+[2024/01/11]: https://draugus.github.io/diary/2024/01/11
+[2024/01/12]: https://draugus.github.io/diary/2024/01/12
+[2024/01/13]: https://draugus.github.io/diary/2024/01/13
+[2024/01/14]: https://draugus.github.io/diary/2024/01/14
+[2024/01/15]: https://draugus.github.io/diary/2024/01/15
+[2024/01/16]: https://draugus.github.io/diary/2024/01/16
+[2024/01/17]: https://draugus.github.io/diary/2024/01/17
+[2024/01/18]: https://draugus.github.io/diary/2024/01/18
+[2024/01/19]: https://draugus.github.io/diary/2024/01/19
+[2024/01/20]: https://draugus.github.io/diary/2024/01/20
+[2024/01/21]: https://draugus.github.io/diary/2024/01/21
+[2024/01/22]: https://draugus.github.io/diary/2024/01/22
+[2024/01/23]: https://draugus.github.io/diary/2024/01/23
+[2024/01/24]: https://draugus.github.io/diary/2024/01/24
+[2024/01/25]: https://draugus.github.io/diary/2024/01/25
+[2024/01/26]: https://draugus.github.io/diary/2024/01/26
+[2024/01/27]: https://draugus.github.io/diary/2024/01/27
+[2024/01/28]: https://draugus.github.io/diary/2024/01/28
+[2024/01/29]: https://draugus.github.io/diary/2024/01/29
+[2024/01/30]: https://draugus.github.io/diary/2024/01/30
+[2024/01/31]: https://draugus.github.io/diary/2024/01/31
