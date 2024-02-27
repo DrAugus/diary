@@ -248,10 +248,11 @@ def cp_file():
             print("cp file: meanwhile add readme and all links about this month")
             everyday(int(new_in[0]), int(new_in[1]))
 
-    des = project_path+"/"+new_in[0] + \
-        "/"+new_in[1] + "/"+new_in[2] + ".md"
-    modify_line(new_in[0], new_in[1], new_in[2])
+    year, month, day = new_in[0], new_in[1], new_in[2]
+    des = f'{project_path}/{year}/{month}/{day}.md'
+    modify_line(year, month, day)
     print("source: ", source, "\ndes: ", des)
+    insert_line(source, f'# {year}/{month}/{day}\n\n')
     cp_file_cmd(source, des)
 
 
@@ -283,25 +284,33 @@ def write_file(file, is_exist):
     fo.close()
 
 
+def modify_month(m, d):
+    if not isinstance(m, str):
+        m = str(m)
+    if len(m) != 2:
+        m = '0' + m            
+    if not isinstance(d, str):
+        d = str(d)
+    if len(d) != 2:
+        d = '0' + d    
+    return m, d
+
+
 def modify_line(y, m, d):
     # print('para', y, m, d)
     if not isinstance(y, str):
         y = str(y)
     filename = project_path+"/" + y + "/README.md"
-    if not isinstance(m, int):
-        m = int(m)
-    if not isinstance(d, str):
-        d = str(d)
-        if len(d) != 2:
-            d = '0' + d
+    m, d = modify_month(m, d)
     # print('modify', y, m, d)
     all_line = ""
     # for month Dec
     next_month = '######'
-    current_month = month_char[m-1]
-    if m < 12:
+    m_int = int(m)
+    current_month = month_char[m_int-1]
+    if m_int < 12:
         # m - 1 is current month
-        next_month = month_char[m]
+        next_month = month_char[m_int]
     find_str = '|' + d + '|'
     cur_month_line_idx = -1
     next_month_line_idx = 999999
@@ -343,15 +352,30 @@ def modify_line(y, m, d):
                 print("prefix", prefix)
                 suffix = this_line[find_index+len(find_str):]
                 print("suffix", suffix)
-                m = str(m)
-                if len(m) != 2:
-                    m = '0' + m
                 add_link = f'|[{d}][{y}/{m}/{d}]|'
                 change_line = prefix+add_link+suffix
                 print('this_line', this_line, "change_line", change_line)
                 all_line[idx] = change_line
     with open(filename, "w+", encoding='utf-8') as file_handle:
         file_handle.writelines(all_line)
+
+
+def insert_line(file_path, insert_info):
+    temp_filename = 'temptemp'
+    # 打开原始文件以读取模式和一个临时文件以写入模式
+    with open(file_path, 'r', encoding='utf-8') as original_file, open(temp_filename, 'w', encoding='utf-8') as temp_file:
+        # 读取第一行并判断是否存在内容
+        first_line = original_file.readline()
+        temp_file.write(insert_info)  # 在临时文件中先写入要插入的内容
+
+        # 将原始文件剩余的所有行写入临时文件
+        if first_line:
+            temp_file.write(first_line)  # 写入原始的第一行（已不是第一行）
+        for line in original_file:
+            temp_file.write(line)
+
+    # 替换原文件为临时文件的内容
+    os.replace(temp_filename, file_path)
 
 
 all_feature = '\n=========*****=========\n' \
