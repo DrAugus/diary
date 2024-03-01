@@ -1,3 +1,6 @@
+import os
+
+
 def modify_line_find(filename, find_str):
     all_line = ""
     with open(filename, "r+", encoding='utf-8') as file_handle:
@@ -16,5 +19,11 @@ def modify_line_find(filename, find_str):
         file_handle.writelines(all_line)
 
 
-if __name__ == '__main__':
-    modify_line_find("temp", '04')
+project_path = os.path.realpath(os.path.dirname(__file__))
+print("project_path:", project_path)
+filename = f'{project_path}/temp'
+
+
+
+# if __name__ == '__main__':
+#     modify_line_find("temp", '04')

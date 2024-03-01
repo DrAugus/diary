@@ -3,3 +3,4 @@
 temp
 Makefile
 .output
+__pycache__

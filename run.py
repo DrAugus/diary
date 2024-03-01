@@ -2,6 +2,8 @@ import math
 from datetime import date
 import os
 
+from utils import get_dir_year_month
+
 big_month = [1, 3, 5, 7, 8, 10, 12]
 
 month_char = [
@@ -133,35 +135,6 @@ def adjust_begin_index(y, m):
     print("new begin: ", begin_index)
 
 
-list_file_depth = 2
-current_depth = 0
-all_file_name = []
-
-
-def list_all_files(root_dir):
-    _files = []
-    exclude_path = ['.github', '.vscode', '.gitignore', 'LICENSE', '.git']
-    # 列出文件夹下的所有目录和文件
-    l1 = os.listdir(root_dir)
-    l1 = list(filter(lambda e: e not in exclude_path, l1))
-    global current_depth
-    current_depth += 1
-    # print(l1)
-    all_file_name.append(l1)
-
-    if current_depth >= list_file_depth:
-        return _files
-
-    for i in range(0, len(l1)):
-        path = os.path.join(root_dir, l1[i])
-        if os.path.isdir(path):
-            _files.extend(list_all_files(path))
-        if os.path.isfile(path):
-            _files.append(path)
-
-    return _files
-
-
 def create_today_file(cp=False):
     today = date.today()
     today = str(today).split('-')
@@ -204,27 +177,23 @@ def create_today_file(cp=False):
 
 
 def create_someday_file(year, month, day):
-    list_all_files(project_path)
-    print("all_file_name", all_file_name)
-    # [['2022', '2031'], ['11', '10'], ['12']]
-    p1 = all_file_name[0]
-    p1 = list(filter(lambda e: e.isdigit(), p1))
-    print("path depth1, year:", p1)
-    if year not in p1:
+    obj = get_dir_year_month(project_path)
+    print("get_dir_year_month", obj)
+    years = obj.keys()
+    print("path depth1, years:", years)
+    if year not in years:
         os.mkdir(project_path + '/' + year)
         os.mkdir(project_path + '/' + year + '/' + month)
         print("mkdir year and month, y m is ", year, month)
-        print("cp file: meanwhile add readme and all links about this month")
+        print("create_someday_file: meanwhile add readme and all links about this month")
         everyday(int(year), int(month))
     else:
-        year_index = p1.index(year)
-        print("year index", year_index)
-        p2 = all_file_name[year_index + 1]
-        print("path depth2, month:", p2)
-        if month not in p2:
+        months = obj[year]
+        print("path depth2, month:", months)
+        if month not in months:
             os.mkdir(project_path + '/' + year + '/' + month)
             print("mkdir month, m is ", month)
-            print("cp file: meanwhile add readme and all links about this month")
+            print("create_someday_file: meanwhile add readme and all links about this month")
             everyday(int(year), int(month))
 
 
@@ -362,7 +331,7 @@ all_feature = '\n=========*****=========\n' \
     'What do you want to do? \n' \
     '   1: create today file or add something in today file.\n' \
     '       use command, not commended\n' \
-    '   2: list all files but only depth 2\n' \
+    '   2: list all year/month dirs but only depth 2\n' \
     '   3: copy file to today file \n' \
     '>> 4: commend -> copy file to appoint file \n' \
     '   5: quit and create a file named temp to write \n' \
@@ -379,11 +348,8 @@ if __name__ == '__main__':
             create_today_file()
             break
         elif judge == '2':
-            list_all_files(project_path)
-            # merge
-            all_file_name = sum(all_file_name, [])
-            all_file_name = list(filter(lambda e: e.isdigit(), all_file_name))
-            print(all_file_name)
+            obj = get_dir_year_month(project_path)
+            print(obj)
             break
         elif judge == '3':
             create_today_file(True)
@@ -392,7 +358,13 @@ if __name__ == '__main__':
             print("please input year month day, as like '2022 01 01' ")
             new_in = input()
             new_in = new_in.split(' ')
+            if len(new_in) != 3:
+                print('error input, exit')
+                break
             year, month, day = new_in[0], new_in[1], new_in[2]
+            if len(year) != 4 and len(month) != 2 and len(day) != 2:
+                print('error input, exit')
+                break                
             create_someday_file(year, month, day)
             cp_file(year, month, day)
             break
