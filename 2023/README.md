@@ -358,3 +358,13 @@
 [2023/12/29]: https://draugus.github.io/diary/2023/12/29
 [2023/12/30]: https://draugus.github.io/diary/2023/12/30
 [2023/12/31]: https://draugus.github.io/diary/2023/12/31
+
+
+<style>
+    padding: unset;
+    width: 2.5rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    text-align: center;
+</style>

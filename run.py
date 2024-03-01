@@ -162,38 +162,21 @@ def create_today_file(cp=False):
     # today = ['2058', '07', '21']
     print("today is", today)
 
-    l1 = os.listdir(project_path)
-    if today[0] not in l1:
-        os.mkdir(project_path + '/' + today[0])
-        print("mkdir year", today[0])
+    year, month, day = today[0], today[1], today[2]
+    path_today = f'{project_path}/{year}/{month}/{day}.md'
 
-    path = os.path.join(project_path, today[0])
-    l2 = os.listdir(path)
-    if today[1] not in l2:
-        os.mkdir(path + '/' + today[1])
-        print("mkdir month", today[1])
-        # meanwhile add readme and
-        # all links about this month
-        print("create today: meanwhile add readme and all links about this month")
-        everyday(int(today[0]), int(today[1]))
-
-    path = os.path.join(path, today[1])
-    l3 = os.listdir(path)
-    day_file = today[2]+".md"
-    exist_file = 0
-    if day_file in l3:
-        exist_file = 1
+    if os.path.exists(path_today):
         print("add something? Y/N?")
         judge = input()
         judge_arr = [['N', 'n'], ['Y', 'y']]
         if judge in judge_arr[0]:
             print("ok, do nothing")
             return
+    
+    create_someday_file(year, month, day)
 
     if cp:
-        source = project_path + '/temp'
-        des = path+"/"+day_file
-        cp_file_cmd(source, des)
+        cp_file(year, month, day)
         return
 
     option_write_file = "\n" \
@@ -204,51 +187,46 @@ def create_today_file(cp=False):
     while 1:
         judge = input()
         if judge == '1':
-            # no current day file
-            # or add something
-            write_file(path+"/"+day_file, exist_file)
+            # add something
+            write_file(path_today)
             break
         elif judge == '2':
-            source = project_path + '/temp'
-            des = path+"/"+day_file
-            cp_file_cmd(source, des)
+            cp_file(year, month, day)
             break
         else:
             print('error input, check again')
 
 
-def cp_file():
-    print("please input year month day, as like '2022 01 01' ")
-    new_in = input()
-    new_in = new_in.split(' ')
-
-    source = project_path + '/temp'
-    fo = open(source, "ab+")
-    fo.close()
+def create_someday_file(year, month, day):
     list_all_files(project_path)
     print("all_file_name", all_file_name)
     # [['2022', '2031'], ['11', '10'], ['12']]
     p1 = all_file_name[0]
     p1 = list(filter(lambda e: e.isdigit(), p1))
     print("path depth1, year:", p1)
-    if new_in[0] not in p1:
-        os.mkdir(project_path + '/' + new_in[0])
-        os.mkdir(project_path + '/' + new_in[0] + '/' + new_in[1])
-        print("mkdir year and month, y m is ", new_in[0], new_in[1])
+    if year not in p1:
+        os.mkdir(project_path + '/' + year)
+        os.mkdir(project_path + '/' + year + '/' + month)
+        print("mkdir year and month, y m is ", year, month)
         print("cp file: meanwhile add readme and all links about this month")
-        everyday(int(new_in[0]), int(new_in[1]))
+        everyday(int(year), int(month))
     else:
-        year_index = p1.index(new_in[0])
+        year_index = p1.index(year)
         print("year index", year_index)
         p2 = all_file_name[year_index + 1]
         print("path depth2, month:", p2)
-        if new_in[1] not in p2:
-            os.mkdir(project_path + '/' + new_in[0] + '/' + new_in[1])
-            print("mkdir month, m is ", )
+        if month not in p2:
+            os.mkdir(project_path + '/' + year + '/' + month)
+            print("mkdir month, m is ", month)
             print("cp file: meanwhile add readme and all links about this month")
-            everyday(int(new_in[0]), int(new_in[1]))
+            everyday(int(year), int(month))
 
-    year, month, day = new_in[0], new_in[1], new_in[2]
+
+def cp_file(year, month, day):
+    source = project_path + '/temp'
+    fo = open(source, "ab+")
+    fo.close()
+
     des = f'{project_path}/{year}/{month}/{day}.md'
     modify_line(year, month, day)
     print("source: ", source, "\ndes: ", des)
@@ -264,16 +242,12 @@ def cp_file_cmd(source, des):
         os.system('cp ' + source + ' ' + des)
 
 
-def write_file(file, is_exist):
+def write_file(file):
     # ab+
     # 以二进制格式打开一个文件用于追加。
     # 如果该文件已存在，文件指针将会放在文件的结尾。
     # 如果该文件不存在，创建新文件用于读写。
     fo = open(file, "ab+")
-    if not is_exist:
-        print("new file", file)
-    else:
-        print("open file", file)
     print('please input content, \':q\' to exit')
     while 1:
         file_content = input()
@@ -384,7 +358,7 @@ all_feature = '\n=========*****=========\n' \
     '       use command, not commended\n' \
     '   2: list all files but only depth 2\n' \
     '   3: copy file to today file \n' \
-    '   4: **commend -> copy file to appoint file \n' \
+    '>> 4: commend -> copy file to appoint file \n' \
     '   5: quit and create a file named temp to write \n' \
     '   6: write every day, input y and m \n' \
     '   7: modify line \n' \
@@ -409,7 +383,12 @@ if __name__ == '__main__':
             create_today_file(True)
             break
         elif judge == '4':
-            cp_file()
+            print("please input year month day, as like '2022 01 01' ")
+            new_in = input()
+            new_in = new_in.split(' ')
+            year, month, day = new_in[0], new_in[1], new_in[2]
+            create_someday_file(year, month, day)
+            cp_file(year, month, day)
             break
         elif judge == '5':
             source = project_path + '/temp'
