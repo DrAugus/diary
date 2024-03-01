@@ -41,9 +41,9 @@ def modify_with_html(last_info) -> str:
         details = get_recent_details(file_path)
 
         one = '<p>\n'
-        title
+        link = f'[...](./{v})'
         one += f'<span class="date">{title}</span><br />\n'
-        one += f'<span class="details">{details}</span>\n'
+        one += f'<span class="details">{details}{link}</span>\n'
         one += '</p>\n'
         res += one
 
@@ -67,7 +67,6 @@ def get_recent_details(file_path):
                 break
         
         res = res[:30]
-        res += '...'
         
         return res
 
