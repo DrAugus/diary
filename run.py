@@ -102,9 +102,15 @@ def everyday(y, m):
     with open(filename, 'r') as file:
         lines = file.readlines()
     if lines and (y not in lines[0] and y not in lines[1]):
-        lines[0] = f"# {y}\n"
-        with open(filename, 'w') as file:
-            file.writelines(lines)
+        # insert title and style
+        insert_info = f"# {y}\n\n"
+        file_style = f'{project_path}/style.css'
+        insert_info += '\n<style>\n'
+        with open(file_style, 'r', encoding='utf-8') as file:
+            for oneline in file.readlines():
+                insert_info += f'{oneline}'
+        insert_info += '\n</style>\n'
+        insert_line(filename, insert_info)
 
 
 

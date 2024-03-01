@@ -135,3 +135,15 @@
 [2022/12/29]: https://draugus.github.io/diary/2022/12/29
 [2022/12/30]: https://draugus.github.io/diary/2022/12/30
 [2022/12/31]: https://draugus.github.io/diary/2022/12/31
+
+
+<style>
+.markdown-body table th, .markdown-body table td {
+    padding: unset;
+    width: 2.5rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    text-align: center;
+}
+</style>
