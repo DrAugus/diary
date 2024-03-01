@@ -23,7 +23,10 @@ to keep a diary, to make life fun.
 <span class="date">2024/01/31</span><br />
 <span class="details">周三 小雨 老天总是玩弄世人 早上打开窗帘，阴雨的一天很昏暗...</span>
 </p>
-
+<p>
+<span class="date">2024/01/30</span><br />
+<span class="details">周二 小雨 感冒还没好，早上打车司机还开一路窗户。上车就让关...</span>
+</p>
 
 
 ## All Diary
