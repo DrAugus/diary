@@ -361,10 +361,12 @@
 
 
 <style>
+.markdown-body table th, .markdown-body table td {
     padding: unset;
     width: 2.5rem;
     height: 2.5rem;
     min-width: 2.5rem;
     min-height: 2.5rem;
     text-align: center;
+}
 </style>
