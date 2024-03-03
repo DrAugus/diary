@@ -8,6 +8,14 @@ to keep a diary, to make life fun.
 
 
 <p>
+<span class="date">2024/02/20</span><br />
+<span class="details">昨晚，噩梦。 上家公司的场景再现，真就一比一还原，太吓人了，[...](./2024/02/20.md)</span>
+</p>
+<p>
+<span class="date">2024/02/18</span><br />
+<span class="details">晴 甲辰年正月初九 早上8点，小区就在放烟花，有点离谱。 [...](./2024/02/18.md)</span>
+</p>
+<p>
 <span class="date">2024/02/06</span><br />
 <span class="details">周二 多云转阴 昨天是听错了吗？楼下早餐店竟然已经关门回家过[...](./2024/02/06.md)</span>
 </p>
@@ -18,14 +26,6 @@ to keep a diary, to make life fun.
 <p>
 <span class="date">2024/02/01</span><br />
 <span class="details">早起窜稀，浪费了许久时间， 赶公交，到地铁站，正好地铁到了就[...](./2024/02/01.md)</span>
-</p>
-<p>
-<span class="date">2024/01/31</span><br />
-<span class="details">周三 小雨 老天总是玩弄世人 早上打开窗帘，阴雨的一天很昏暗[...](./2024/01/31.md)</span>
-</p>
-<p>
-<span class="date">2024/01/30</span><br />
-<span class="details">周二 小雨 感冒还没好，早上打车司机还开一路窗户。上车就让关[...](./2024/01/30.md)</span>
 </p>
 
 
