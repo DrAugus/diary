@@ -8,6 +8,10 @@ to keep a diary, to make life fun.
 
 
 <p>
+<span class="date">2024/03/13</span><br />
+<span class="details">晴 周三 早上下地铁，正好看到公交车，就把打车订单取消了。遇<a href="./2024/03/13.md">...</a></span>
+</p>
+<p>
 <span class="date">2024/02/20</span><br />
 <span class="details">昨晚，噩梦。 上家公司的场景再现，真就一比一还原，太吓人了，<a href="./2024/02/20.md">...</a></span>
 </p>
@@ -22,10 +26,6 @@ to keep a diary, to make life fun.
 <p>
 <span class="date">2024/02/02</span><br />
 <span class="details">周五 完了要被裁了。被老板说太菜了。 虽然口头上让我过个好年<a href="./2024/02/02.md">...</a></span>
-</p>
-<p>
-<span class="date">2024/02/01</span><br />
-<span class="details">早起窜稀，浪费了许久时间， 赶公交，到地铁站，正好地铁到了就<a href="./2024/02/01.md">...</a></span>
 </p>
 
 
