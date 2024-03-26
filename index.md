@@ -8,8 +8,16 @@ to keep a diary, to make life fun.
 
 
 <p>
+<span class="date">2024/03/26</span><br />
+<span class="details">越想要，越得不到 很多事情都是这样 找工作也是<a href="./2024/03/26.md">...</a></span>
+</p>
+<p>
 <span class="date">2024/03/13</span><br />
 <span class="details">晴 周三 早上下地铁，正好看到公交车，就把打车订单取消了。遇<a href="./2024/03/13.md">...</a></span>
+</p>
+<p>
+<span class="date">2024/02/28</span><br />
+<span class="details">2024春节前，被延期转正 跟hr说了诉求，建议年后转岗 年<a href="./2024/02/28.md">...</a></span>
 </p>
 <p>
 <span class="date">2024/02/20</span><br />
@@ -18,14 +26,6 @@ to keep a diary, to make life fun.
 <p>
 <span class="date">2024/02/18</span><br />
 <span class="details">晴 甲辰年正月初九 早上8点，小区就在放烟花，有点离谱。 <a href="./2024/02/18.md">...</a></span>
-</p>
-<p>
-<span class="date">2024/02/06</span><br />
-<span class="details">周二 多云转阴 昨天是听错了吗？楼下早餐店竟然已经关门回家过<a href="./2024/02/06.md">...</a></span>
-</p>
-<p>
-<span class="date">2024/02/02</span><br />
-<span class="details">周五 完了要被裁了。被老板说太菜了。 虽然口头上让我过个好年<a href="./2024/02/02.md">...</a></span>
 </p>
 
 
