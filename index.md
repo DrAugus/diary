@@ -6,26 +6,28 @@ to keep a diary, to make life fun.
 
 ## 最近更新
 
+
 <p>
-<span class="date">2024/03/26</span><br />
-<span class="details">越想要，越得不到 很多事情都是这样 找工作也是<a href="./2024/03/26">...</a></span>
+<span class="date">2024/06/13</span><br />
+<span class="details">我真的服了。早上起的晚了，蹲坑蹲的久了<a href="./2024/06/13">，路上还遇到大雨，路面...</a></span>
 </p>
 <p>
-<span class="date">2024/03/13</span><br />
-<span class="details">晴 周三 早上下地铁，正好看到公交车，就把打车订单取消了。遇<a href="./2024/03/13">...</a></span>
+<span class="date">2024/06/12</span><br />
+<span class="details">交通运输大队，处理违法。经历如下， 先<a href="./2024/06/12">走到电子违法处理窗口，...</a></span>
 </p>
 <p>
-<span class="date">2024/02/28</span><br />
-<span class="details">2024春节前，被延期转正 跟hr说了诉求，建议年后转岗 年<a href="./2024/02/28">...</a></span>
+<span class="date">2024/06/11</span><br />
+<span class="details">感情的思索，什么是爱，什么是被爱。在没<a href="./2024/06/11">有被爱的相处下，什么都...</a></span>
 </p>
 <p>
-<span class="date">2024/02/20</span><br />
-<span class="details">昨晚，噩梦。 上家公司的场景再现，真就一比一还原，太吓人了，<a href="./2024/02/20">...</a></span>
+<span class="date">2024/06/10</span><br />
+<span class="details">第一次在飞机上看到苍蝇！值得<a href="./2024/06/10">记录一下。。。 ...</a></span>
 </p>
 <p>
-<span class="date">2024/02/18</span><br />
-<span class="details">晴 甲辰年正月初九 早上8点，小区就在放烟花，有点离谱。 <a href="./2024/02/18">...</a></span>
+<span class="date">2024/06/07</span><br />
+<span class="details">十年一瞬，十年归来 <a href="./2024/06/07">何得何失？ ...</a></span>
 </p>
+
 
 ## All Diary
 
