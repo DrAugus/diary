@@ -1,4 +1,4 @@
-name: Life recent script workflow
+name: Auto regenerate homepage
 on:  
   push:
     branches:
@@ -30,21 +30,21 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m "feat" -a
+          git commit -m "feat: auto reg homepage" -a
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.DEPLOY_GH }}
-          title: "feat: auto reg homepage"
-          commit-message: "feat: auto reg homepage"
-          committer: GitHub <noreply@github.com>
-          author: GitHub <noreply@github.com>
-          branch: create-pull-request/patch-auto-reg-homepage
-          base: master    
-          labels: |
-            homepage
-            automated pr
-          assignees: DrAugus
-          # Review cannot be requested from pull request author.
-          # reviewers: DrAugus  
+      # - name: Create Pull Request
+      #   uses: peter-evans/create-pull-request@v6
+      #   with:
+      #     token: ${{ secrets.DEPLOY_GH }}
+      #     title: "feat: auto reg homepage"
+      #     commit-message: "feat: auto reg homepage"
+      #     committer: GitHub <noreply@github.com>
+      #     author: GitHub <noreply@github.com>
+      #     branch: create-pull-request/patch-auto-reg-homepage
+      #     base: master    
+      #     labels: |
+      #       homepage
+      #       automated pr
+      #     assignees: DrAugus
+      #     # Review cannot be requested from pull request author.
+      #     # reviewers: DrAugus  
