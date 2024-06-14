@@ -6,7 +6,6 @@ to keep a diary, to make life fun.
 
 ## 最近更新
 
-
 <p>
 <span class="date">2024/03/26</span><br />
 <span class="details">越想要，越得不到 很多事情都是这样 找工作也是<a href="./2024/03/26">...</a></span>
@@ -28,12 +27,11 @@ to keep a diary, to make life fun.
 <span class="details">晴 甲辰年正月初九 早上8点，小区就在放烟花，有点离谱。 <a href="./2024/02/18">...</a></span>
 </p>
 
-
 ## All Diary
 
-- [2022]
-- [2023]
 - [2024]
+- [2023]
+- [2022]
 
 ----
 

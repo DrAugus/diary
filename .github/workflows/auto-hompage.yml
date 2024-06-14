@@ -1,0 +1,50 @@
+name: Life recent script workflow
+on:  
+  push:
+    branches:
+      - master
+    paths:
+      - "**.md"
+
+jobs:
+
+  # Auto regenerate homepage
+  regenerate:
+    runs-on: ubuntu-latest
+
+    permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Other steps that change files in the repository
+      - name: Execute Python script
+        run: |
+          python homepage.py
+
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "feat" -a
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.DEPLOY_GH }}
+          title: "feat: auto reg homepage"
+          commit-message: "feat: auto reg homepage"
+          committer: GitHub <noreply@github.com>
+          author: GitHub <noreply@github.com>
+          branch: create-pull-request/patch-auto-reg-homepage
+          base: master    
+          labels: |
+            homepage
+            automated pr
+          assignees: DrAugus
+          # Review cannot be requested from pull request author.
+          # reviewers: DrAugus  

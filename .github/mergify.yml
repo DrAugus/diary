@@ -28,9 +28,10 @@ pull_request_rules:
       merge:
         method: merge
 
-  - name: automatic merge for auto pull requests
+  - name: automatic merge for auto reg homepage
     conditions:
-      - title=pulling refs/heads/dev into master
+      - author=DrAugus
+      - "title=feat: auto reg homepage"
     actions:
       merge:
         method: merge
