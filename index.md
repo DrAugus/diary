@@ -8,24 +8,24 @@ to keep a diary, to make life fun.
 
 
 <p>
-<span class="date">2024/06/13</span><br />
-<span class="details">我真的服了。早上起的晚了，蹲坑蹲的久了<a href="./2024/06/13">，路上还遇到大雨，路面...</a></span>
+<span class="date">2024/09/09</span><br />
+<span class="details">眼睛很不舒服 不能用手揉，就拿湿巾擦了<a href="./2024/09/09">一下， 右眼掉了4根睫...</a></span>
 </p>
 <p>
-<span class="date">2024/06/12</span><br />
-<span class="details">交通运输大队，处理违法。经历如下， 先<a href="./2024/06/12">走到电子违法处理窗口，...</a></span>
+<span class="date">2024/09/08</span><br />
+<span class="details">下午昏睡，起来感觉还没睡醒。 说是要去<a href="./2024/09/08">吃饭，就在手机上看了看...</a></span>
 </p>
 <p>
-<span class="date">2024/06/11</span><br />
-<span class="details">感情的思索，什么是爱，什么是被爱。在没<a href="./2024/06/11">有被爱的相处下，什么都...</a></span>
+<span class="date">2024/08/20</span><br />
+<span class="details">感觉梦境与现实打通了，或者是平行世界？<a href="./2024/08/20"> 凌晨1点左右的场景 ...</a></span>
 </p>
 <p>
-<span class="date">2024/06/10</span><br />
-<span class="details">第一次在飞机上看到苍蝇！值得<a href="./2024/06/10">记录一下。。。 ...</a></span>
+<span class="date">2024/08/16</span><br />
+<span class="details">骑着共享电动车上班半个月后 终于出现了<a href="./2024/08/16">下雨天 早上出门前，想...</a></span>
 </p>
 <p>
-<span class="date">2024/06/07</span><br />
-<span class="details">十年一瞬，十年归来 <a href="./2024/06/07">何得何失？ ...</a></span>
+<span class="date">2024/08/15</span><br />
+<span class="details">灾难性的一天 原本今天应该是填写迎新系<a href="./2024/08/15">统的时间点 早上起来，...</a></span>
 </p>
 
 
