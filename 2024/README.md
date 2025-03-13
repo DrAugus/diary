@@ -278,3 +278,48 @@
 [2024/09/28]: https://draugus.github.io/diary/2024/09/28
 [2024/09/29]: https://draugus.github.io/diary/2024/09/29
 [2024/09/30]: https://draugus.github.io/diary/2024/09/30
+
+
+## Oct
+
+|Sun|Mon|Tue|Wed|Thu|Fri|Sat|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| | |01|02|03|04|05|
+|06|07|08|09|10|11|12|
+|13|14|15|16|[17][2024/10/17]|18|19|
+|20|21|22|23|24|25|26|
+|27|28|29|30|31| | |
+
+
+
+[2024/10/01]: https://draugus.github.io/diary/2024/10/01
+[2024/10/02]: https://draugus.github.io/diary/2024/10/02
+[2024/10/03]: https://draugus.github.io/diary/2024/10/03
+[2024/10/04]: https://draugus.github.io/diary/2024/10/04
+[2024/10/05]: https://draugus.github.io/diary/2024/10/05
+[2024/10/06]: https://draugus.github.io/diary/2024/10/06
+[2024/10/07]: https://draugus.github.io/diary/2024/10/07
+[2024/10/08]: https://draugus.github.io/diary/2024/10/08
+[2024/10/09]: https://draugus.github.io/diary/2024/10/09
+[2024/10/10]: https://draugus.github.io/diary/2024/10/10
+[2024/10/11]: https://draugus.github.io/diary/2024/10/11
+[2024/10/12]: https://draugus.github.io/diary/2024/10/12
+[2024/10/13]: https://draugus.github.io/diary/2024/10/13
+[2024/10/14]: https://draugus.github.io/diary/2024/10/14
+[2024/10/15]: https://draugus.github.io/diary/2024/10/15
+[2024/10/16]: https://draugus.github.io/diary/2024/10/16
+[2024/10/17]: https://draugus.github.io/diary/2024/10/17
+[2024/10/18]: https://draugus.github.io/diary/2024/10/18
+[2024/10/19]: https://draugus.github.io/diary/2024/10/19
+[2024/10/20]: https://draugus.github.io/diary/2024/10/20
+[2024/10/21]: https://draugus.github.io/diary/2024/10/21
+[2024/10/22]: https://draugus.github.io/diary/2024/10/22
+[2024/10/23]: https://draugus.github.io/diary/2024/10/23
+[2024/10/24]: https://draugus.github.io/diary/2024/10/24
+[2024/10/25]: https://draugus.github.io/diary/2024/10/25
+[2024/10/26]: https://draugus.github.io/diary/2024/10/26
+[2024/10/27]: https://draugus.github.io/diary/2024/10/27
+[2024/10/28]: https://draugus.github.io/diary/2024/10/28
+[2024/10/29]: https://draugus.github.io/diary/2024/10/29
+[2024/10/30]: https://draugus.github.io/diary/2024/10/30
+[2024/10/31]: https://draugus.github.io/diary/2024/10/31
