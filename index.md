@@ -8,6 +8,10 @@ to keep a diary, to make life fun.
 
 
 <p>
+<span class="date">2025/06/10</span><br />
+<span class="details">最近都有点<a href="./2025/06/10">无趣了...</a></span>
+</p>
+<p>
 <span class="date">2025/03/14</span><br />
 <span class="details">各大会员体系，就是让你抵住诱惑。这些产<a href="./2025/03/14">品经理们，费尽心思，创...</a></span>
 </p>
@@ -22,10 +26,6 @@ to keep a diary, to make life fun.
 <p>
 <span class="date">2024/09/12</span><br />
 <span class="details">微信公众号刷“猫”，刷多了，就会跟之前<a href="./2024/09/12">在微博上刷的一样 会出...</a></span>
-</p>
-<p>
-<span class="date">2024/09/11</span><br />
-<span class="details">早上醒来之前 梦到狗咬左脚，非常痛<a href="./2024/09/11"> 醒来的时候依然很痛 ...</a></span>
 </p>
 
 
