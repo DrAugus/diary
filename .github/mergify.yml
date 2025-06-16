@@ -19,11 +19,11 @@ pull_request_rules:
     actions:
       merge:
         method: merge
-
-  - name: automatic merge for auto reg homepage
-    conditions:
-      - author=DrAugus
-      - "title=feat: auto reg homepage"
-    actions:
-      merge:
-        method: merge
+# 不再 merge 一直保持 pr 就会自动更新主页
+  # - name: automatic merge for auto reg homepage
+  #   conditions:
+  #     - author=DrAugus
+  #     - "title=feat: auto reg homepage"
+  #   actions:
+  #     merge:
+  #       method: merge
