@@ -31,6 +31,7 @@ to keep a diary, to make life fun.
 
 ## All Diary
 
+- [2025]
 - [2024]
 - [2023]
 - [2022]
@@ -48,6 +49,7 @@ choose one day (not commend)
 [2022]: ./2022/
 [2023]: ./2023/
 [2024]: ./2024/
+[2025]: ./2025/
 
 <style>
 .date {
