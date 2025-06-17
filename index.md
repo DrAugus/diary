@@ -8,24 +8,24 @@ to keep a diary, to make life fun.
 
 
 <p>
-<span class="date">2025/06/10</span><br />
-<span class="details">最近都有点<a href="./2025/06/10">无趣了...</a></span>
+<span class="date">2024/06/18</span><br />
+<span class="details">每天都在痛苦的活着，说<a href="./2024/06/18">好的享乐呢？ ...</a></span>
 </p>
 <p>
-<span class="date">2025/03/14</span><br />
-<span class="details">各大会员体系，就是让你抵住诱惑。这些产<a href="./2025/03/14">品经理们，费尽心思，创...</a></span>
+<span class="date">2024/06/13</span><br />
+<span class="details">我真的服了。早上起的晚了，蹲坑蹲的久了<a href="./2024/06/13">，路上还遇到大雨，路面...</a></span>
 </p>
 <p>
-<span class="date">2024/10/17</span><br />
-<span class="details">其实陌生人都挺热心的，不过似乎年长一些<a href="./2024/10/17">，父亲那一辈的很热心 ...</a></span>
+<span class="date">2024/06/12</span><br />
+<span class="details">交通运输大队，处理违法。经历如下， 先<a href="./2024/06/12">走到电子违法处理窗口，...</a></span>
 </p>
 <p>
-<span class="date">2024/09/15</span><br />
-<span class="details">感觉之前不是这样的 不会出现知识储备为<a href="./2024/09/15">0的情况 不会出现完全...</a></span>
+<span class="date">2024/06/11</span><br />
+<span class="details">感情的思索，什么是爱，什么是被爱。在没<a href="./2024/06/11">有被爱的相处下，什么都...</a></span>
 </p>
 <p>
-<span class="date">2024/09/12</span><br />
-<span class="details">微信公众号刷“猫”，刷多了，就会跟之前<a href="./2024/09/12">在微博上刷的一样 会出...</a></span>
+<span class="date">2024/06/10</span><br />
+<span class="details">第一次在飞机上看到苍蝇！值得<a href="./2024/06/10">记录一下。。。 ...</a></span>
 </p>
 
 
