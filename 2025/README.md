@@ -101,3 +101,48 @@
 [2025/06/28]: https://draugus.github.io/diary/2025/06/28
 [2025/06/29]: https://draugus.github.io/diary/2025/06/29
 [2025/06/30]: https://draugus.github.io/diary/2025/06/30
+
+
+## Jul
+
+|Sun|Mon|Tue|Wed|Thu|Fri|Sat|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| | |01|02|03|04|[05][2025/07/05]|
+|06|07|08|09|10|11|12|
+|13|14|15|16|17|18|19|
+|20|21|22|23|24|25|26|
+|27|28|29|30|31| | |
+
+
+
+[2025/07/01]: https://draugus.github.io/diary/2025/07/01
+[2025/07/02]: https://draugus.github.io/diary/2025/07/02
+[2025/07/03]: https://draugus.github.io/diary/2025/07/03
+[2025/07/04]: https://draugus.github.io/diary/2025/07/04
+[2025/07/05]: https://draugus.github.io/diary/2025/07/05
+[2025/07/06]: https://draugus.github.io/diary/2025/07/06
+[2025/07/07]: https://draugus.github.io/diary/2025/07/07
+[2025/07/08]: https://draugus.github.io/diary/2025/07/08
+[2025/07/09]: https://draugus.github.io/diary/2025/07/09
+[2025/07/10]: https://draugus.github.io/diary/2025/07/10
+[2025/07/11]: https://draugus.github.io/diary/2025/07/11
+[2025/07/12]: https://draugus.github.io/diary/2025/07/12
+[2025/07/13]: https://draugus.github.io/diary/2025/07/13
+[2025/07/14]: https://draugus.github.io/diary/2025/07/14
+[2025/07/15]: https://draugus.github.io/diary/2025/07/15
+[2025/07/16]: https://draugus.github.io/diary/2025/07/16
+[2025/07/17]: https://draugus.github.io/diary/2025/07/17
+[2025/07/18]: https://draugus.github.io/diary/2025/07/18
+[2025/07/19]: https://draugus.github.io/diary/2025/07/19
+[2025/07/20]: https://draugus.github.io/diary/2025/07/20
+[2025/07/21]: https://draugus.github.io/diary/2025/07/21
+[2025/07/22]: https://draugus.github.io/diary/2025/07/22
+[2025/07/23]: https://draugus.github.io/diary/2025/07/23
+[2025/07/24]: https://draugus.github.io/diary/2025/07/24
+[2025/07/25]: https://draugus.github.io/diary/2025/07/25
+[2025/07/26]: https://draugus.github.io/diary/2025/07/26
+[2025/07/27]: https://draugus.github.io/diary/2025/07/27
+[2025/07/28]: https://draugus.github.io/diary/2025/07/28
+[2025/07/29]: https://draugus.github.io/diary/2025/07/29
+[2025/07/30]: https://draugus.github.io/diary/2025/07/30
+[2025/07/31]: https://draugus.github.io/diary/2025/07/31
