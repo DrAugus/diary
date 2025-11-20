@@ -52,7 +52,7 @@ jobs:
     runs-on: ubuntu-latest
     # needs: regenerate
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
         with:
           ref: "" # This should checkout the default branch latest commit
       - name: Setup Pages
